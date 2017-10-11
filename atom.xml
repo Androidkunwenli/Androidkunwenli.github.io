@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cduyzh.com/"/>
-  <updated>2017-10-11T05:14:57.244Z</updated>
+  <updated>2017-10-11T05:54:22.297Z</updated>
   <id>http://www.cduyzh.com/</id>
   
   <author>
@@ -21,12 +21,14 @@
     <link href="http://www.cduyzh.com/%E6%88%91%E7%9A%84%E4%B8%80%E5%A4%A9/"/>
     <id>http://www.cduyzh.com/我的一天/</id>
     <published>2017-10-10T12:30:33.000Z</published>
-    <updated>2017-10-11T05:14:57.244Z</updated>
+    <updated>2017-10-11T05:54:22.297Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+      <category term="生活" scheme="http://www.cduyzh.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
