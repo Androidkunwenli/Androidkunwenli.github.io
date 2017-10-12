@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cduyzh.com/"/>
-  <updated>2017-10-12T01:40:16.445Z</updated>
+  <updated>2017-10-12T01:41:11.433Z</updated>
   <id>http://www.cduyzh.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.cduyzh.com/Android%E5%8E%BB%E5%90%84%E4%B8%AA%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA%E8%AF%84%E4%BB%B7/"/>
     <id>http://www.cduyzh.com/Android去各个应用市场评价/</id>
     <published>2017-10-10T12:30:33.000Z</published>
-    <updated>2017-10-12T01:40:16.445Z</updated>
+    <updated>2017-10-12T01:41:11.433Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="跳转评价通用跳转Intent"><a href="#跳转评价通用跳转Intent" class="headerlink" title="跳转评价通用跳转Intent"></a>跳转评价通用跳转Intent</h2><p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p><pre><code>Uri uri = Uri.parse(&quot;market://details?id=&quot;+getPackageName());Intent intent = new Intent(Intent.ACTION_VIEW,uri);intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);startActivity(intent);`</code></pre><p>通过以上代码就能够列出您手机上所安装的所有应用市场（如：google player、豌豆荚、360手机助手等），让您选择。</p><p>加点福利吧，把调用分享的代码也贴出来，免得以后到处找：</p><pre><code> Intent sendIntent = new Intent(); sendIntent.setAction(Intent.ACTION_SEND); sendIntent.setType(&quot;text/*&quot;); sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());startActivity(sendIntent);</code></pre><h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p><pre><code>Uri uri = Uri.parse(&quot;http://www.samsungapps.com/appquery/appDetail.as?appId=&quot; + getPackageName());Intent goToMarket = new Intent();goToMarket.setClassName(&quot;com.sec.android.app.samsungapps&quot;, &quot;com.sec.android.app.samsungapps.Main&quot;);goToMarket.setData(uri);startActivity(goToMarket);</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="跳转评价通用跳转Intent"><a href="#跳转评价通用跳转Intent" class="headerlink" title="跳转评价通用跳转Intent"></a>跳转评价通用跳转Intent</h2><p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p><pre><code>Uri uri = Uri.parse(&quot;market://details?id=&quot;+getPackageName());Intent intent = new Intent(Intent.ACTION_VIEW,uri);intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);startActivity(intent);`</code></pre><p>通过以上代码就能够列出您手机上所安装的所有应用市场（如：google player、豌豆荚、360手机助手等），让您选择。<br>加点福利吧，把调用分享的代码也贴出来，免得以后到处找：</p><pre><code> Intent sendIntent = new Intent(); sendIntent.setAction(Intent.ACTION_SEND); sendIntent.setType(&quot;text/*&quot;); sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());startActivity(sendIntent);</code></pre><h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p><pre><code>Uri uri = Uri.parse(&quot;http://www.samsungapps.com/appquery/appDetail.as?appId=&quot; + getPackageName());Intent goToMarket = new Intent();goToMarket.setClassName(&quot;com.sec.android.app.samsungapps&quot;, &quot;com.sec.android.app.samsungapps.Main&quot;);goToMarket.setData(uri);startActivity(goToMarket);</code></pre>]]></content>
     
     <summary type="html">
     
