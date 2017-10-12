@@ -415,10 +415,10 @@ Intent intent = new Intent(Intent.ACTION_VIEW,uri);
 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 startActivity(intent);`
 </code></pre><p>通过以上代码就能够列出您手机上所安装的所有应用市场（如：google player、豌豆荚、360手机助手等），让您选择。<br>加点福利吧，把调用分享的代码也贴出来，免得以后到处找：</p>
-<pre><code> Intent sendIntent = new Intent();
- sendIntent.setAction(Intent.ACTION_SEND);
- sendIntent.setType(&quot;text/*&quot;);
- sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());
+<pre><code>Intent sendIntent = new Intent();
+sendIntent.setAction(Intent.ACTION_SEND);
+sendIntent.setType(&quot;text/*&quot;);
+sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());
 startActivity(sendIntent);
 </code></pre><h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p>
 <pre><code>Uri uri = Uri.parse(&quot;http://www.samsungapps.com/appquery/appDetail.as?appId=&quot; + getPackageName());
