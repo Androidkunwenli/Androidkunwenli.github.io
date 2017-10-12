@@ -127,18 +127,18 @@
 
 
 
-<meta name="description" content="本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new Intent(Intent.AC">
+<meta name="description" content="跳转评价通用跳转Intent本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new In">
 <meta name="keywords" content="生活">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android去各个应用市场评价">
 <meta property="og:url" content="http://www.cduyzh.com/Android去各个应用市场评价/index.html">
 <meta property="og:site_name" content="赵亚坤Blog">
-<meta property="og:description" content="本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new Intent(Intent.AC">
+<meta property="og:description" content="跳转评价通用跳转Intent本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new In">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-12T01:35:59.450Z">
+<meta property="og:updated_time" content="2017-10-12T01:39:30.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android去各个应用市场评价">
-<meta name="twitter:description" content="本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new Intent(Intent.AC">
+<meta name="twitter:description" content="跳转评价通用跳转Intent本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new In">
 
 
 
@@ -408,7 +408,7 @@
       
 
       
-        <p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p>
+        <h2 id="跳转评价通用跳转Intent"><a href="#跳转评价通用跳转Intent" class="headerlink" title="跳转评价通用跳转Intent"></a>跳转评价通用跳转Intent</h2><p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p>
 <pre><code>Uri uri = Uri.parse(&quot;market://details?id=&quot;+getPackageName());
 Intent intent = new Intent(Intent.ACTION_VIEW,uri);
 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -627,7 +627,7 @@ startActivity(goToMarket);
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用评价的时候遇到的坑"><span class="nav-number">1.</span> <span class="nav-text">调用评价的时候遇到的坑</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#跳转评价通用跳转Intent"><span class="nav-number">1.</span> <span class="nav-text">跳转评价通用跳转Intent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用评价的时候遇到的坑"><span class="nav-number">2.</span> <span class="nav-text">调用评价的时候遇到的坑</span></a></li></ol></div>
             
 
           </div>
