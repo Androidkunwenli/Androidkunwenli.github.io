@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zhaoyakun.top/"/>
-  <updated>2017-10-12T04:51:37.498Z</updated>
+  <updated>2017-10-23T07:37:47.730Z</updated>
   <id>http://zhaoyakun.top/</id>
   
   <author>
@@ -17,20 +17,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python学习第一天-函数</title>
+    <link href="http://zhaoyakun.top/python%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9-%E5%87%BD%E6%95%B0/"/>
+    <id>http://zhaoyakun.top/python学习第一天-函数/</id>
+    <published>2017-10-23T07:11:33.000Z</published>
+    <updated>2017-10-23T07:37:47.730Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><p>在python,定义一个函数使用def语句,求绝对值</p><pre><code>def my_abs(x):    if x &gt;= 0:           return x    else:        return -x</code></pre><p>函数限制只能输入int值或者float值</p><pre><code>def my_abs(x):    if not isinstance(x, (int, float)):        raise TypeError(&apos;只能输入int值或者float值&apos;)    if x &gt;= 0:        return x    else:        return -x</code></pre><h3 id="空函数"><a href="#空函数" class="headerlink" title="空函数"></a>空函数</h3><p>如果想定义一个什么都不做的空函数,可以用 pass 语句</p><pre><code>def nop():    pass</code></pre><h3 id="函数多个返回值"><a href="#函数多个返回值" class="headerlink" title="函数多个返回值"></a>函数多个返回值</h3><p>返回多个参数</p><pre><code>def move(x, y, step, angle=0):     nx = x + step * math.cos(angle)    ny = y - step * math.sin(angle)    return nx, ny</code></pre><a id="more"></a><h3 id="二元一次方程式"><a href="#二元一次方程式" class="headerlink" title="二元一次方程式"></a>二元一次方程式</h3><p>写一个二元一次方程式</p><pre><code>def quadratic(a,b,c):    if not isinstance(a,(int,float)):        raise TypeError(&apos;a is not a number&apos;)    if not isinstance(b,(int,float)):        raise TypeError(&apos;b is not a number&apos;)    if not isinstance(c,(int,float)):        raise TypeError(&apos;c is not a number&apos;)    d=b*b-4*a*c    if a==0:        if b==0:            if c==0:                return &apos;方程根为全体实数&apos;            else:                return &apos;方程无根&apos;        else:            x1=-c/b            x2=x1            return x1,x2    else:        if d&lt;0:            return &apos;方程无根&apos;        else:            x1 = (-b + math.sqrt(d))/2/a            x2 = (-b - math.sqrt(d))/2/a            return x1,x2print(quadratic(2,2,0))</code></pre><h3 id="次方"><a href="#次方" class="headerlink" title="次方"></a>次方</h3><p>写一个函数 a是要传入的求方的值 b表示几次方 默认是2次方</p><pre><code>def timessquare(a, b=2):    sun = 1    while b &gt; 0:        b = b - 1        sun = sun * a    return sunprint(timessquare(5))</code></pre><h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>给值设置默认参数</p><pre><code>def enroll(name, gender, age=16, city=&apos;北京&apos;):    print(name)    print(gender)    print(age)    print(city)enroll(&apos;python&apos;, &apos;石家庄&apos;, 26, &apos;河北&apos;)enroll(&apos;android&apos;, &apos;邯郸&apos;, city=&apos;北京的&apos;, age=23)</code></pre><h3 id="默认参数必须指向不变对象"><a href="#默认参数必须指向不变对象" class="headerlink" title="默认参数必须指向不变对象"></a>默认参数必须指向不变对象</h3><p>Python函数在定义的时候，默认参数L的值就被计算出来了，即<code>[]</code>，因为默认参数L也是一个变量，它指向对象<code>[]</code>，每次调用该函数，如果改变了L的内容，则下次调用时，默认参数的内容就变了，不再是函数定义时的<code>[]</code>了。<br>所以，定义默认参数要牢记一点：默认参数必须指向不变对象！<br>要修改上面的例子，我们可以用None这个不变对象来实现：</p><pre><code>def add_end(L=None):    if L is None:        L = []    return Lprint(add_end([&apos;I&apos;]))print(add_end([&apos;Love&apos;]))print(add_end([&apos;You&apos;]))</code></pre><h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><pre><code>def calc(*numbers):    s = 0    for n in numbers:        s = s + n * n;    return sprint(calc(1, 23, 3))num = [1, 2, 3, 4]print(calc(*num))</code></pre><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><pre><code>def fact(n):    if n == 1:        return 1    return n * fact(n - 1);</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;定义函数&quot;&gt;&lt;a href=&quot;#定义函数&quot; class=&quot;headerlink&quot; title=&quot;定义函数&quot;&gt;&lt;/a&gt;定义函数&lt;/h3&gt;&lt;p&gt;在python,定义一个函数使用def语句,求绝对值&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def my_abs(x):
+    if x &amp;gt;= 0:
+           return x
+    else:
+        return -x
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;函数限制只能输入int值或者float值&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def my_abs(x):
+    if not isinstance(x, (int, float)):
+        raise TypeError(&amp;apos;只能输入int值或者float值&amp;apos;)
+    if x &amp;gt;= 0:
+        return x
+    else:
+        return -x
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;空函数&quot;&gt;&lt;a href=&quot;#空函数&quot; class=&quot;headerlink&quot; title=&quot;空函数&quot;&gt;&lt;/a&gt;空函数&lt;/h3&gt;&lt;p&gt;如果想定义一个什么都不做的空函数,可以用 pass 语句&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def nop():
+    pass
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;函数多个返回值&quot;&gt;&lt;a href=&quot;#函数多个返回值&quot; class=&quot;headerlink&quot; title=&quot;函数多个返回值&quot;&gt;&lt;/a&gt;函数多个返回值&lt;/h3&gt;&lt;p&gt;返回多个参数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def move(x, y, step, angle=0):
+     nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx, ny
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://zhaoyakun.top/categories/python/"/>
+    
+    
+      <category term="学习" scheme="http://zhaoyakun.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android去各个应用市场评价</title>
     <link href="http://zhaoyakun.top/Android%E5%8E%BB%E5%90%84%E4%B8%AA%E5%BA%94%E7%94%A8%E5%B8%82%E5%9C%BA%E8%AF%84%E4%BB%B7/"/>
     <id>http://zhaoyakun.top/Android去各个应用市场评价/</id>
     <published>2017-10-10T12:30:33.000Z</published>
-    <updated>2017-10-12T04:51:37.498Z</updated>
+    <updated>2017-10-23T07:37:54.147Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="跳转评价通用跳转Intent"><a href="#跳转评价通用跳转Intent" class="headerlink" title="跳转评价通用跳转Intent"></a>跳转评价通用跳转Intent</h2><p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p><pre><code>Uri uri = Uri.parse(&quot;market://details?id=&quot;+getPackageName());Intent intent = new Intent(Intent.ACTION_VIEW,uri);intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);startActivity(intent);`</code></pre><p>通过以上代码就能够列出您手机上所安装的所有应用市场（如：google player、豌豆荚、360手机助手等），让您选择。<br>加点福利吧，把调用分享的代码也贴出来，免得以后到处找：</p><pre><code>Intent sendIntent = new Intent();sendIntent.setAction(Intent.ACTION_SEND);sendIntent.setType(&quot;text/*&quot;);sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());startActivity(sendIntent);</code></pre><h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p><pre><code>Uri uri = Uri.parse(&quot;http://www.samsungapps.com/appquery/appDetail.as?appId=&quot; + getPackageName());Intent goToMarket = new Intent();goToMarket.setClassName(&quot;com.sec.android.app.samsungapps&quot;, &quot;com.sec.android.app.samsungapps.Main&quot;);goToMarket.setData(uri);startActivity(goToMarket);</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="跳转评价通用跳转Intent"><a href="#跳转评价通用跳转Intent" class="headerlink" title="跳转评价通用跳转Intent"></a>跳转评价通用跳转Intent</h2><p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p><pre><code>Uri uri = Uri.parse(&quot;market://details?id=&quot;+getPackageName());Intent intent = new Intent(Intent.ACTION_VIEW,uri);intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);startActivity(intent);`</code></pre><p>通过以上代码就能够列出您手机上所安装的所有应用市场（如：google player、豌豆荚、360手机助手等），让您选择。<br>加点福利吧，把调用分享的代码也贴出来，免得以后到处找：</p><pre><code>Intent sendIntent = new Intent();sendIntent.setAction(Intent.ACTION_SEND);sendIntent.setType(&quot;text/*&quot;);sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());startActivity(sendIntent);</code></pre><a id="more"></a><h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p><pre><code>Uri uri = Uri.parse(&quot;http://www.samsungapps.com/appquery/appDetail.as?appId=&quot; + getPackageName());Intent goToMarket = new Intent();goToMarket.setClassName(&quot;com.sec.android.app.samsungapps&quot;, &quot;com.sec.android.app.samsungapps.Main&quot;);goToMarket.setData(uri);startActivity(goToMarket);</code></pre>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;跳转评价通用跳转Intent&quot;&gt;&lt;a href=&quot;#跳转评价通用跳转Intent&quot; class=&quot;headerlink&quot; title=&quot;跳转评价通用跳转Intent&quot;&gt;&lt;/a&gt;跳转评价通用跳转Intent&lt;/h2&gt;&lt;p&gt;本来以为一般的软件都会有“去评分”、“亲，给
-      
+      &lt;h2 id=&quot;跳转评价通用跳转Intent&quot;&gt;&lt;a href=&quot;#跳转评价通用跳转Intent&quot; class=&quot;headerlink&quot; title=&quot;跳转评价通用跳转Intent&quot;&gt;&lt;/a&gt;跳转评价通用跳转Intent&lt;/h2&gt;&lt;p&gt;本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName());
+Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+startActivity(intent);`
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;通过以上代码就能够列出您手机上所安装的所有应用市场（如：google player、豌豆荚、360手机助手等），让您选择。&lt;br&gt;加点福利吧，把调用分享的代码也贴出来，免得以后到处找：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Intent sendIntent = new Intent();
+sendIntent.setAction(Intent.ACTION_SEND);
+sendIntent.setType(&amp;quot;text/*&amp;quot;);
+sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());
+startActivity(sendIntent);
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     

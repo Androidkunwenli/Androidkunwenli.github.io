@@ -131,7 +131,7 @@
 <meta property="og:site_name" content="赵亚坤Blog">
 <meta property="og:description" content="跳转评价通用跳转Intent本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new In">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-12T04:51:37.498Z">
+<meta property="og:updated_time" content="2017-10-23T07:37:54.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android去各个应用市场评价">
 <meta name="twitter:description" content="跳转评价通用跳转Intent本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。 Uri uri = Uri.parse(&amp;quot;market://details?id=&amp;quot;+getPackageName()); Intent intent = new In">
@@ -428,7 +428,8 @@ sendIntent.setAction(Intent.ACTION_SEND);
 sendIntent.setType(&quot;text/*&quot;);
 sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());
 startActivity(sendIntent);
-</code></pre><h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p>
+</code></pre><a id="more"></a>
+<h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p>
 <pre><code>Uri uri = Uri.parse(&quot;http://www.samsungapps.com/appquery/appDetail.as?appId=&quot; + getPackageName());
 Intent goToMarket = new Intent();
 goToMarket.setClassName(&quot;com.sec.android.app.samsungapps&quot;, &quot;com.sec.android.app.samsungapps.Main&quot;);
@@ -489,6 +490,22 @@ startActivity(goToMarket);
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/python学习第一天-函数/" rel="prev" title="python学习第一天-函数">
+                python学习第一天-函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -566,7 +583,7 @@ startActivity(goToMarket);
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -577,7 +594,7 @@ startActivity(goToMarket);
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -588,7 +605,7 @@ startActivity(goToMarket);
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -316,6 +316,185 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhaoyakun.top/python学习第一天-函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhao Yakun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://oxopbx73a.bkt.clouddn.com/blog.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="赵亚坤Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/python学习第一天-函数/" itemprop="url">python学习第一天-函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-23T15:11:33+08:00">
+                2017-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/python学习第一天-函数/" class="leancloud_visitors" data-flag-title="python学习第一天-函数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h3><p>在python,定义一个函数使用def语句,求绝对值</p>
+<pre><code>def my_abs(x):
+    if x &gt;= 0:
+           return x
+    else:
+        return -x
+</code></pre><p>函数限制只能输入int值或者float值</p>
+<pre><code>def my_abs(x):
+    if not isinstance(x, (int, float)):
+        raise TypeError(&apos;只能输入int值或者float值&apos;)
+    if x &gt;= 0:
+        return x
+    else:
+        return -x
+</code></pre><h3 id="空函数"><a href="#空函数" class="headerlink" title="空函数"></a>空函数</h3><p>如果想定义一个什么都不做的空函数,可以用 pass 语句</p>
+<pre><code>def nop():
+    pass
+</code></pre><h3 id="函数多个返回值"><a href="#函数多个返回值" class="headerlink" title="函数多个返回值"></a>函数多个返回值</h3><p>返回多个参数</p>
+<pre><code>def move(x, y, step, angle=0):
+     nx = x + step * math.cos(angle)
+    ny = y - step * math.sin(angle)
+    return nx, ny
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/python学习第一天-函数/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zhaoyakun.top/Android去各个应用市场评价/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -419,8 +598,7 @@
 
       
         
-          
-            <h2 id="跳转评价通用跳转Intent"><a href="#跳转评价通用跳转Intent" class="headerlink" title="跳转评价通用跳转Intent"></a>跳转评价通用跳转Intent</h2><p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p>
+          <h2 id="跳转评价通用跳转Intent"><a href="#跳转评价通用跳转Intent" class="headerlink" title="跳转评价通用跳转Intent"></a>跳转评价通用跳转Intent</h2><p>本来以为一般的软件都会有“去评分”、“亲，给个好评”这样的功能，但是在网上搜了搜竟没有搜到，问了三个群外加5个童鞋，分析log，反编译看源码，终于找到了这个uri，获取他真不容易啊。</p>
 <pre><code>Uri uri = Uri.parse(&quot;market://details?id=&quot;+getPackageName());
 Intent intent = new Intent(Intent.ACTION_VIEW,uri);
 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -431,14 +609,14 @@ sendIntent.setAction(Intent.ACTION_SEND);
 sendIntent.setType(&quot;text/*&quot;);
 sendIntent.putExtra(Intent.EXTRA_TEXT, contentEditText.getText().toString());
 startActivity(sendIntent);
-</code></pre><h2 id="调用评价的时候遇到的坑"><a href="#调用评价的时候遇到的坑" class="headerlink" title="调用评价的时候遇到的坑"></a>调用评价的时候遇到的坑</h2><p>调用三星应用市场无反应解决方法</p>
-<pre><code>Uri uri = Uri.parse(&quot;http://www.samsungapps.com/appquery/appDetail.as?appId=&quot; + getPackageName());
-Intent goToMarket = new Intent();
-goToMarket.setClassName(&quot;com.sec.android.app.samsungapps&quot;, &quot;com.sec.android.app.samsungapps.Main&quot;);
-goToMarket.setData(uri);
-startActivity(goToMarket);
 </code></pre>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Android去各个应用市场评价/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -522,7 +700,7 @@ startActivity(goToMarket);
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -533,7 +711,7 @@ startActivity(goToMarket);
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -544,7 +722,7 @@ startActivity(goToMarket);
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
